@@ -168,7 +168,6 @@ shape = SubResource("RectangleShape2D_hpfl8")
 unique_name_in_owner = true
 position = Vector2(226, 532)
 rotation = 0.0
-constant_linear_velocity = Vector2(0, -1500)
 rotation_when_toggled = -0.959931
 
 [node name="Flipper2" parent="Screen" instance=ExtResource("2_3n01g")]
@@ -176,7 +175,6 @@ unique_name_in_owner = true
 position = Vector2(406, 532)
 rotation = 3.14159
 scale = Vector2(1, -1)
-constant_linear_velocity = Vector2(0, -1500)
 rotation_when_toggled = 4.10152
 
 [node name="Borza" parent="Screen" node_paths=PackedStringArray("positions") instance=ExtResource("7_fjhuu")]
