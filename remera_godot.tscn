@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0fgocmd7tgve"]
+
+[ext_resource type="Script" path="res://remera_godot.gd" id="1_p48w6"]
+[ext_resource type="Texture2D" uid="uid://dc0qyo2c6wpp3" path="res://assets/Godot_icon.svg.png" id="3_062om"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l62id"]
+radius = 30.0
+
+[node name="RemeraGodot" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_p48w6")
+
+[node name="RemeraGodot" type="Polygon2D" parent="."]
+z_index = 1
+position = Vector2(-3, -11)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-36, 2, -31, 11, -15, -1, -14, 41, 20, 42, 19, -3, 31, 9, 40, 1, 22, -19, -15, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_l62id")
+
+[node name="GodotIcon_svg" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-7.62939e-06, -7.62939e-06)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("3_062om")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(14, 0)
+target_position = Vector2(-60, 0)
+collision_mask = 4
+hit_from_inside = true

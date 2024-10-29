@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://brtwo8hiitooh"]
+
+[ext_resource type="Texture2D" uid="uid://11uug5mnpe25" path="res://assets/icon.svg" id="1_s0wsb"]
+[ext_resource type="Script" path="res://remera_conseguida_fx.gd" id="2_tpobp"]
+
+[sub_resource type="Curve" id="Curve_7fwn0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0289367), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_t4jeq"]
+curve = SubResource("Curve_7fwn0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_26wog"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 116.41
+initial_velocity_max = 152.24
+gravity = Vector3(0, 98, 0)
+scale_min = 0.1
+scale_max = 0.1
+scale_curve = SubResource("CurveTexture_t4jeq")
+
+[node name="RemeraConseguidaFX" type="GPUParticles2D"]
+z_index = 10
+emitting = false
+explosiveness = 1.0
+texture = ExtResource("1_s0wsb")
+process_material = SubResource("ParticleProcessMaterial_26wog")
+script = ExtResource("2_tpobp")
