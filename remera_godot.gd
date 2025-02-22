@@ -10,7 +10,7 @@ func spawn_from(borza):
 	create_tween().tween_property(self, "scale", Vector2.ONE, 0.3).from(Vector2.ZERO).set_trans(Tween.TRANS_QUAD)
 	create_tween().tween_property(self, "global_position", target_position, 0.3).from(borza.global_position).set_trans(Tween.TRANS_QUAD)
 
-func hit_by_ball(ball):
+func hit_by_ball(_ball):
 	conseguida.emit()
 	stop_colliding.call_deferred()
 	create_tween().tween_property(self, "scale", Vector2.ZERO, 0.3).set_trans(Tween.TRANS_QUAD)

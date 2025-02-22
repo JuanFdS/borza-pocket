@@ -20,11 +20,11 @@ func _ready():
 		finish_game()
 	)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_pressed("ui_accept"):
 		%Empezar.pressed.emit()
 
-func _process(delta):
+func _process(_delta):
 	%TimerLabel.text = "%01d:%02d" % [%Timer.time_left / 60.0, fmod(%Timer.time_left, 60.0)]
 
 func finish_game():

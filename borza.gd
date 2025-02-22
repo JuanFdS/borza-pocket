@@ -23,7 +23,7 @@ func being_hit() -> bool:
 	return shaker.is_processing()
 	
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	sprite.position = vibration
 	modulate = modulate.lerp(Color.WHITE, 0.1)
 	if being_hit() or disabled:
@@ -40,7 +40,7 @@ func _physics_process(delta):
 		sprite.flip_h = true
 
 
-func hit_by_ball(ball):
+func hit_by_ball(_ball):
 	if(being_hit()): return
 	$Hit.play()
 	modulate = Color.BLACK

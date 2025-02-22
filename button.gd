@@ -15,7 +15,7 @@ func _input(event):
 		if event.is_released() and event.button_index == MOUSE_BUTTON_LEFT:
 			button_pressed = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if(Input.is_action_pressed(action)):
 		button_pressed = true
 	if(Input.is_action_just_released(action)):
